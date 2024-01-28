@@ -1,0 +1,91 @@
+{
+  "collectionName": "components_properties_names",
+  "info": {
+    "displayName": "name",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "lond_lat": {
+      "type": "string"
+    },
+    "lond_long": {
+      "type": "string"
+    },
+    "tillegg": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "string"
+    },
+    "utm": {
+      "type": "string"
+    },
+    "katblad": {
+      "type": "string"
+    },
+    "kart": {
+      "type": "string"
+    },
+    "bredde": {
+      "type": "string"
+    },
+    "lengde": {
+      "type": "string"
+    },
+    "forklaring": {
+      "type": "text"
+    },
+    "historie": {
+      "type": "text"
+    },
+    "dato": {
+      "type": "string"
+    },
+    "kilde": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "string"
+    },
+    "long": {
+      "type": "string"
+    },
+    "stripe": {
+      "type": "decimal"
+    },
+    "seksjon": {
+      "type": "string"
+    },
+    "bilde": {
+      "type": "string"
+    },
+    "nett": {
+      "type": "string"
+    },
+    "nett_hist": {
+      "type": "string"
+    },
+    "kommune": {
+      "type": "string"
+    },
+    "billedtekst": {
+      "type": "string"
+    },
+    "fotograf": {
+      "type": "string"
+    },
+    "land": {
+      "type": "string"
+    },
+    "forbokstav": {
+      "type": "string"
+    }
+  }
+}

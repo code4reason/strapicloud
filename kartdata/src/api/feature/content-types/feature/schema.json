@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "features",
+  "info": {
+    "singularName": "feature",
+    "pluralName": "features",
+    "displayName": "feature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Feature"
+      ]
+    },
+    "geometry": {
+      "type": "component",
+      "repeatable": false,
+      "component": "geometry.type"
+    },
+    "properties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.name"
+    }
+  }
+}
