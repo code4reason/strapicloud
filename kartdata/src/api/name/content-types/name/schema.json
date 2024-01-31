@@ -98,6 +98,11 @@
     },
     "OLD_ID": {
       "type": "decimal"
+    },
+    "ny_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::type.type"
     }
   }
 }
