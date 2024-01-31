@@ -29,7 +29,7 @@ export interface PropertiesName extends Schema.Component {
     description: '';
   };
   attributes: {
-    name: Attribute.String;
+    navn: Attribute.String;
     lond_lat: Attribute.String;
     lond_long: Attribute.String;
     tillegg: Attribute.String;
@@ -40,8 +40,8 @@ export interface PropertiesName extends Schema.Component {
     kart: Attribute.String;
     bredde: Attribute.String;
     lengde: Attribute.String;
-    forklaring: Attribute.Text;
-    historie: Attribute.Text;
+    Forklaring: Attribute.Text;
+    Historie: Attribute.Text;
     dato: Attribute.String;
     kilde: Attribute.String;
     lat: Attribute.String;

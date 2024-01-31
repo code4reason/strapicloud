@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "name": {
+    "navn": {
       "type": "string"
     },
     "lond_lat": {
@@ -39,10 +39,10 @@
     "lengde": {
       "type": "string"
     },
-    "forklaring": {
+    "Forklaring": {
       "type": "text"
     },
-    "historie": {
+    "Historie": {
       "type": "text"
     },
     "dato": {

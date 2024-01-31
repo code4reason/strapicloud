@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "names",
+  "info": {
+    "singularName": "name",
+    "pluralName": "names",
+    "displayName": "Stedsnavn",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Navn": {
+      "type": "string"
+    },
+    "lond_lat": {
+      "type": "float"
+    },
+    "lond_long": {
+      "type": "float"
+    },
+    "Tillegg": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "string"
+    },
+    "Pin": {
+      "type": "string"
+    },
+    "UTM": {
+      "type": "string"
+    },
+    "KartBLAD": {
+      "type": "string"
+    },
+    "Kart": {
+      "type": "string"
+    },
+    "Bredde": {
+      "type": "decimal"
+    },
+    "Lengde": {
+      "type": "decimal"
+    },
+    "FORKLARING": {
+      "type": "text"
+    },
+    "HISTORIE": {
+      "type": "text"
+    },
+    "Dato": {
+      "type": "string"
+    },
+    "Merk": {
+      "type": "string"
+    },
+    "KILDE": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "decimal"
+    },
+    "long": {
+      "type": "decimal"
+    },
+    "Stripe": {
+      "type": "decimal"
+    },
+    "Seksjon": {
+      "type": "string"
+    },
+    "Bilde": {
+      "type": "string"
+    },
+    "Nett": {
+      "type": "text"
+    },
+    "Nett_hist": {
+      "type": "string"
+    },
+    "Kommune": {
+      "type": "string"
+    },
+    "Billedtekst": {
+      "type": "string"
+    },
+    "Fotograf": {
+      "type": "string"
+    },
+    "Land": {
+      "type": "string"
+    },
+    "Forbokstav": {
+      "type": "string"
+    },
+    "OLD_ID": {
+      "type": "decimal"
+    }
+  }
+}

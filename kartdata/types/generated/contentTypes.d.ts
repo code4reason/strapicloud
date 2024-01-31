@@ -362,6 +362,89 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiFeatureFeature extends Schema.CollectionType {
+  collectionName: 'features';
+  info: {
+    singularName: 'feature';
+    pluralName: 'features';
+    displayName: 'feature';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    type: Attribute.Enumeration<['Feature']>;
+    geometry: Attribute.Component<'geometry.type'>;
+    properties: Attribute.Component<'properties.name'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::feature.feature',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::feature.feature',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNameName extends Schema.CollectionType {
+  collectionName: 'names';
+  info: {
+    singularName: 'name';
+    pluralName: 'names';
+    displayName: 'Stedsnavn';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Navn: Attribute.String;
+    lond_lat: Attribute.Float;
+    lond_long: Attribute.Float;
+    Tillegg: Attribute.String;
+    Type: Attribute.String;
+    Pin: Attribute.String;
+    UTM: Attribute.String;
+    KartBLAD: Attribute.String;
+    Kart: Attribute.String;
+    Bredde: Attribute.Decimal;
+    Lengde: Attribute.Decimal;
+    FORKLARING: Attribute.Text;
+    HISTORIE: Attribute.Text;
+    Dato: Attribute.String;
+    Merk: Attribute.String;
+    KILDE: Attribute.String;
+    lat: Attribute.Decimal;
+    long: Attribute.Decimal;
+    Stripe: Attribute.Decimal;
+    Seksjon: Attribute.String;
+    Bilde: Attribute.String;
+    Nett: Attribute.Text;
+    Nett_hist: Attribute.String;
+    Kommune: Attribute.String;
+    Billedtekst: Attribute.String;
+    Fotograf: Attribute.String;
+    Land: Attribute.String;
+    Forbokstav: Attribute.String;
+    OLD_ID: Attribute.Decimal;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::name.name', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::name.name', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -781,60 +864,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiFeatureFeature extends Schema.CollectionType {
-  collectionName: 'features';
-  info: {
-    singularName: 'feature';
-    pluralName: 'features';
-    displayName: 'feature';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    type: Attribute.Enumeration<['Feature']>;
-    geometry: Attribute.Component<'geometry.type'>;
-    properties: Attribute.Component<'properties.name'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::feature.feature',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::feature.feature',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiTestTest extends Schema.CollectionType {
-  collectionName: 'tests';
-  info: {
-    singularName: 'test';
-    pluralName: 'tests';
-    displayName: 'test';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -845,6 +874,8 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::feature.feature': ApiFeatureFeature;
+      'api::name.name': ApiNameName;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -853,8 +884,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::feature.feature': ApiFeatureFeature;
-      'api::test.test': ApiTestTest;
     }
   }
 }
