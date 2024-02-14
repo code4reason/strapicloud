@@ -103,6 +103,14 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::type.type"
+    },
+    "url": {
+      "type": "string"
+    },
+    "area": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::area.area"
     }
   }
 }

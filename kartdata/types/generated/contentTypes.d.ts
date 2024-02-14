@@ -362,82 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiNameName extends Schema.CollectionType {
-  collectionName: 'names';
-  info: {
-    singularName: 'name';
-    pluralName: 'names';
-    displayName: 'Stedsnavn';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Navn: Attribute.String;
-    lond_lat: Attribute.Float;
-    lond_long: Attribute.Float;
-    Tillegg: Attribute.String;
-    Type: Attribute.String;
-    Pin: Attribute.String;
-    UTM: Attribute.String;
-    KartBLAD: Attribute.String;
-    Kart: Attribute.String;
-    Bredde: Attribute.Decimal;
-    Lengde: Attribute.Decimal;
-    FORKLARING: Attribute.Text;
-    HISTORIE: Attribute.Text;
-    Dato: Attribute.String;
-    Merk: Attribute.String;
-    KILDE: Attribute.String;
-    lat: Attribute.Decimal;
-    long: Attribute.Decimal;
-    Stripe: Attribute.Decimal;
-    Seksjon: Attribute.String;
-    Bilde: Attribute.String;
-    Nett: Attribute.Text;
-    Nett_hist: Attribute.String;
-    Kommune: Attribute.String;
-    Billedtekst: Attribute.String;
-    Fotograf: Attribute.String;
-    Land: Attribute.String;
-    Forbokstav: Attribute.String;
-    OLD_ID: Attribute.Decimal;
-    ny_type: Attribute.Relation<'api::name.name', 'oneToOne', 'api::type.type'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::name.name', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::name.name', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiTypeType extends Schema.CollectionType {
-  collectionName: 'types';
-  info: {
-    singularName: 'type';
-    pluralName: 'types';
-    displayName: 'Type';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Navn: Attribute.String;
-    Beskrivelse: Attribute.String;
-    Symbol: Attribute.Media;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::type.type', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::type.type', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -857,6 +781,133 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAreaArea extends Schema.CollectionType {
+  collectionName: 'areas';
+  info: {
+    singularName: 'area';
+    pluralName: 'areas';
+    displayName: 'area';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.Text;
+    rawdata: Attribute.JSON;
+    areadata: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::area.area', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::area.area', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLineLine extends Schema.CollectionType {
+  collectionName: 'lines';
+  info: {
+    singularName: 'line';
+    pluralName: 'lines';
+    displayName: 'line';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.Text;
+    linedata: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::line.line', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::line.line', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNameName extends Schema.CollectionType {
+  collectionName: 'names';
+  info: {
+    singularName: 'name';
+    pluralName: 'names';
+    displayName: 'Stedsnavn';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Navn: Attribute.String;
+    lond_lat: Attribute.Float;
+    lond_long: Attribute.Float;
+    Tillegg: Attribute.String;
+    Type: Attribute.String;
+    Pin: Attribute.String;
+    UTM: Attribute.String;
+    KartBLAD: Attribute.String;
+    Kart: Attribute.String;
+    Bredde: Attribute.Decimal;
+    Lengde: Attribute.Decimal;
+    FORKLARING: Attribute.Text;
+    HISTORIE: Attribute.Text;
+    Dato: Attribute.String;
+    Merk: Attribute.String;
+    KILDE: Attribute.String;
+    lat: Attribute.Decimal;
+    long: Attribute.Decimal;
+    Stripe: Attribute.Decimal;
+    Seksjon: Attribute.String;
+    Bilde: Attribute.String;
+    Nett: Attribute.Text;
+    Nett_hist: Attribute.String;
+    Kommune: Attribute.String;
+    Billedtekst: Attribute.String;
+    Fotograf: Attribute.String;
+    Land: Attribute.String;
+    Forbokstav: Attribute.String;
+    OLD_ID: Attribute.Decimal;
+    ny_type: Attribute.Relation<'api::name.name', 'oneToOne', 'api::type.type'>;
+    url: Attribute.String;
+    area: Attribute.Relation<'api::name.name', 'oneToOne', 'api::area.area'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::name.name', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::name.name', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTypeType extends Schema.CollectionType {
+  collectionName: 'types';
+  info: {
+    singularName: 'type';
+    pluralName: 'types';
+    displayName: 'Type';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Navn: Attribute.String;
+    Beskrivelse: Attribute.String;
+    Symbol: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::type.type', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::type.type', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -867,8 +918,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::name.name': ApiNameName;
-      'api::type.type': ApiTypeType;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -877,6 +926,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::area.area': ApiAreaArea;
+      'api::line.line': ApiLineLine;
+      'api::name.name': ApiNameName;
+      'api::type.type': ApiTypeType;
     }
   }
 }
