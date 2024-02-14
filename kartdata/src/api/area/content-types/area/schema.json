@@ -4,7 +4,8 @@
   "info": {
     "singularName": "area",
     "pluralName": "areas",
-    "displayName": "area"
+    "displayName": "area",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,14 +15,14 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "rawdata": {
       "type": "json"
     },
     "areadata": {
       "type": "json"
+    },
+    "beskrivelse": {
+      "type": "richtext"
     }
   }
 }

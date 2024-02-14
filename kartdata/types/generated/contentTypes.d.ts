@@ -787,15 +787,16 @@ export interface ApiAreaArea extends Schema.CollectionType {
     singularName: 'area';
     pluralName: 'areas';
     displayName: 'area';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String;
-    description: Attribute.Text;
     rawdata: Attribute.JSON;
     areadata: Attribute.JSON;
+    beskrivelse: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -812,14 +813,15 @@ export interface ApiLineLine extends Schema.CollectionType {
     singularName: 'line';
     pluralName: 'lines';
     displayName: 'line';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String;
-    description: Attribute.Text;
     linedata: Attribute.JSON;
+    beskrivelse: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

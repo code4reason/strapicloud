@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-02-14T11:52:27.841Z"
+    "x-generation-date": "2024-02-14T12:18:35.144Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -98,11 +98,11 @@
               "name": {
                 "type": "string"
               },
-              "description": {
-                "type": "string"
-              },
               "rawdata": {},
-              "areadata": {}
+              "areadata": {},
+              "beskrivelse": {
+                "type": "string"
+              }
             }
           }
         }
@@ -159,11 +159,11 @@
           "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
           "rawdata": {},
           "areadata": {},
+          "beskrivelse": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -498,10 +498,10 @@
               "name": {
                 "type": "string"
               },
-              "description": {
+              "linedata": {},
+              "beskrivelse": {
                 "type": "string"
-              },
-              "linedata": {}
+              }
             }
           }
         }
@@ -558,10 +558,10 @@
           "name": {
             "type": "string"
           },
-          "description": {
+          "linedata": {},
+          "beskrivelse": {
             "type": "string"
           },
-          "linedata": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -1871,11 +1871,11 @@
                       "name": {
                         "type": "string"
                       },
-                      "description": {
-                        "type": "string"
-                      },
                       "rawdata": {},
                       "areadata": {},
+                      "beskrivelse": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"

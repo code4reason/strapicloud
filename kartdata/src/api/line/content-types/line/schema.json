@@ -4,7 +4,8 @@
   "info": {
     "singularName": "line",
     "pluralName": "lines",
-    "displayName": "line"
+    "displayName": "line",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,11 +15,11 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "linedata": {
       "type": "json"
+    },
+    "beskrivelse": {
+      "type": "richtext"
     }
   }
 }
