@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kommuner",
+  "info": {
+    "singularName": "kommune",
+    "pluralName": "kommuner",
+    "displayName": "kommune"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "navn": {
+      "type": "string",
+      "required": true,
+      "default": "Engerdal"
+    }
+  }
+}

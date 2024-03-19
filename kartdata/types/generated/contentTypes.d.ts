@@ -512,6 +512,12 @@ export interface PluginContentReleasesRelease extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     releasedAt: Attribute.DateTime;
+    scheduledAt: Attribute.DateTime;
+    timezone: Attribute.String;
+    status: Attribute.Enumeration<
+      ['ready', 'blocked', 'failed', 'done', 'empty']
+    > &
+      Attribute.Required;
     actions: Attribute.Relation<
       'plugin::content-releases.release',
       'oneToMany',
@@ -566,6 +572,7 @@ export interface PluginContentReleasesReleaseAction
       'manyToOne',
       'plugin::content-releases.release'
     >;
+    isEntryValid: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -807,6 +814,37 @@ export interface ApiAreaArea extends Schema.CollectionType {
   };
 }
 
+export interface ApiKommuneKommune extends Schema.CollectionType {
+  collectionName: 'kommuner';
+  info: {
+    singularName: 'kommune';
+    pluralName: 'kommuner';
+    displayName: 'kommune';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    navn: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Engerdal'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::kommune.kommune',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::kommune.kommune',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLineLine extends Schema.CollectionType {
   collectionName: 'lines';
   info: {
@@ -849,9 +887,6 @@ export interface ApiNameName extends Schema.CollectionType {
     lond_long: Attribute.Float;
     Tillegg: Attribute.String;
     Type: Attribute.String;
-    Pin: Attribute.String;
-    UTM: Attribute.String;
-    KartBLAD: Attribute.String;
     Kart: Attribute.String;
     Bredde: Attribute.Decimal;
     Lengde: Attribute.Decimal;
@@ -862,12 +897,9 @@ export interface ApiNameName extends Schema.CollectionType {
     KILDE: Attribute.String;
     lat: Attribute.Decimal;
     long: Attribute.Decimal;
-    Stripe: Attribute.Decimal;
-    Seksjon: Attribute.String;
     Bilde: Attribute.String;
     Nett: Attribute.Text;
     Nett_hist: Attribute.String;
-    Kommune: Attribute.String;
     Billedtekst: Attribute.String;
     Fotograf: Attribute.String;
     Land: Attribute.String;
@@ -876,6 +908,7 @@ export interface ApiNameName extends Schema.CollectionType {
     ny_type: Attribute.Relation<'api::name.name', 'oneToOne', 'api::type.type'>;
     url: Attribute.String;
     area: Attribute.Relation<'api::name.name', 'oneToOne', 'api::area.area'>;
+    beskrivelse: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -929,6 +962,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::area.area': ApiAreaArea;
+      'api::kommune.kommune': ApiKommuneKommune;
       'api::line.line': ApiLineLine;
       'api::name.name': ApiNameName;
       'api::type.type': ApiTypeType;

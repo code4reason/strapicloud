@@ -27,15 +27,6 @@
     "Type": {
       "type": "string"
     },
-    "Pin": {
-      "type": "string"
-    },
-    "UTM": {
-      "type": "string"
-    },
-    "KartBLAD": {
-      "type": "string"
-    },
     "Kart": {
       "type": "string"
     },
@@ -66,12 +57,6 @@
     "long": {
       "type": "decimal"
     },
-    "Stripe": {
-      "type": "decimal"
-    },
-    "Seksjon": {
-      "type": "string"
-    },
     "Bilde": {
       "type": "string"
     },
@@ -79,9 +64,6 @@
       "type": "text"
     },
     "Nett_hist": {
-      "type": "string"
-    },
-    "Kommune": {
       "type": "string"
     },
     "Billedtekst": {
@@ -111,6 +93,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::area.area"
+    },
+    "beskrivelse": {
+      "type": "richtext"
     }
   }
 }
