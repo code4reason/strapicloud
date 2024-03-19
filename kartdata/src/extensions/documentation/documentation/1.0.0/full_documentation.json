@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-03-19T09:29:35.283Z"
+    "x-generation-date": "2024-03-19T10:41:01.729Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -893,7 +893,8 @@
               "linedata": {},
               "beskrivelse": {
                 "type": "string"
-              }
+              },
+              "rawdata": {}
             }
           }
         }
@@ -954,6 +955,7 @@
           "beskrivelse": {
             "type": "string"
           },
+          "rawdata": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"

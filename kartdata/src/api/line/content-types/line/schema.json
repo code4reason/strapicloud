@@ -20,6 +20,9 @@
     },
     "beskrivelse": {
       "type": "richtext"
+    },
+    "rawdata": {
+      "type": "json"
     }
   }
 }

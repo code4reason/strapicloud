@@ -859,6 +859,7 @@ export interface ApiLineLine extends Schema.CollectionType {
     name: Attribute.String;
     linedata: Attribute.JSON;
     beskrivelse: Attribute.RichText;
+    rawdata: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
