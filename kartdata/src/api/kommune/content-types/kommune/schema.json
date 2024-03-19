@@ -4,7 +4,8 @@
   "info": {
     "singularName": "kommune",
     "pluralName": "kommuner",
-    "displayName": "kommune"
+    "displayName": "kommune",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,8 +14,7 @@
   "attributes": {
     "navn": {
       "type": "string",
-      "required": true,
-      "default": "Engerdal"
+      "required": true
     }
   }
 }

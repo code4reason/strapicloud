@@ -820,14 +820,13 @@ export interface ApiKommuneKommune extends Schema.CollectionType {
     singularName: 'kommune';
     pluralName: 'kommuner';
     displayName: 'kommune';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    navn: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'Engerdal'>;
+    navn: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -885,30 +884,18 @@ export interface ApiNameName extends Schema.CollectionType {
     Navn: Attribute.String;
     lond_lat: Attribute.Float;
     lond_long: Attribute.Float;
-    Tillegg: Attribute.String;
     Type: Attribute.String;
-    Kart: Attribute.String;
-    Bredde: Attribute.Decimal;
-    Lengde: Attribute.Decimal;
     FORKLARING: Attribute.Text;
     HISTORIE: Attribute.Text;
-    Dato: Attribute.String;
-    Merk: Attribute.String;
-    KILDE: Attribute.String;
-    lat: Attribute.Decimal;
-    long: Attribute.Decimal;
-    Bilde: Attribute.String;
-    Nett: Attribute.Text;
-    Nett_hist: Attribute.String;
-    Billedtekst: Attribute.String;
-    Fotograf: Attribute.String;
-    Land: Attribute.String;
-    Forbokstav: Attribute.String;
-    OLD_ID: Attribute.Decimal;
     ny_type: Attribute.Relation<'api::name.name', 'oneToOne', 'api::type.type'>;
-    url: Attribute.String;
     area: Attribute.Relation<'api::name.name', 'oneToOne', 'api::area.area'>;
     beskrivelse: Attribute.RichText;
+    kommune: Attribute.Relation<
+      'api::name.name',
+      'oneToOne',
+      'api::kommune.kommune'
+    >;
+    Status: Attribute.Enumeration<['Kladd', 'Godkjent']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

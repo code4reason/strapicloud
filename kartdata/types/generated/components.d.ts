@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BildeLink extends Schema.Component {
+  collectionName: 'components_bilde_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    Tittel: Attribute.String;
+    Beskrivelse: Attribute.Text;
+    URL: Attribute.String;
+  };
+}
+
 export interface GeometryType extends Schema.Component {
   collectionName: 'components_geometry_types';
   info: {
@@ -62,6 +74,7 @@ export interface PropertiesName extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'bilde.link': BildeLink;
       'geometry.type': GeometryType;
       'properties.name': PropertiesName;
     }

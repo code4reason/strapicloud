@@ -21,20 +21,8 @@
     "lond_long": {
       "type": "float"
     },
-    "Tillegg": {
-      "type": "string"
-    },
     "Type": {
       "type": "string"
-    },
-    "Kart": {
-      "type": "string"
-    },
-    "Bredde": {
-      "type": "decimal"
-    },
-    "Lengde": {
-      "type": "decimal"
     },
     "FORKLARING": {
       "type": "text"
@@ -42,52 +30,10 @@
     "HISTORIE": {
       "type": "text"
     },
-    "Dato": {
-      "type": "string"
-    },
-    "Merk": {
-      "type": "string"
-    },
-    "KILDE": {
-      "type": "string"
-    },
-    "lat": {
-      "type": "decimal"
-    },
-    "long": {
-      "type": "decimal"
-    },
-    "Bilde": {
-      "type": "string"
-    },
-    "Nett": {
-      "type": "text"
-    },
-    "Nett_hist": {
-      "type": "string"
-    },
-    "Billedtekst": {
-      "type": "string"
-    },
-    "Fotograf": {
-      "type": "string"
-    },
-    "Land": {
-      "type": "string"
-    },
-    "Forbokstav": {
-      "type": "string"
-    },
-    "OLD_ID": {
-      "type": "decimal"
-    },
     "ny_type": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::type.type"
-    },
-    "url": {
-      "type": "string"
     },
     "area": {
       "type": "relation",
@@ -96,6 +42,18 @@
     },
     "beskrivelse": {
       "type": "richtext"
+    },
+    "kommune": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kommune.kommune"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Kladd",
+        "Godkjent"
+      ]
     }
   }
 }

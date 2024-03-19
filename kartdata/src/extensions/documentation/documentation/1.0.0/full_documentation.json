@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-03-19T08:14:47.545Z"
+    "x-generation-date": "2024-03-19T09:20:58.342Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1296,70 +1296,14 @@
                 "type": "number",
                 "format": "float"
               },
-              "Tillegg": {
-                "type": "string"
-              },
               "Type": {
                 "type": "string"
-              },
-              "Kart": {
-                "type": "string"
-              },
-              "Bredde": {
-                "type": "number",
-                "format": "float"
-              },
-              "Lengde": {
-                "type": "number",
-                "format": "float"
               },
               "FORKLARING": {
                 "type": "string"
               },
               "HISTORIE": {
                 "type": "string"
-              },
-              "Dato": {
-                "type": "string"
-              },
-              "Merk": {
-                "type": "string"
-              },
-              "KILDE": {
-                "type": "string"
-              },
-              "lat": {
-                "type": "number",
-                "format": "float"
-              },
-              "long": {
-                "type": "number",
-                "format": "float"
-              },
-              "Bilde": {
-                "type": "string"
-              },
-              "Nett": {
-                "type": "string"
-              },
-              "Nett_hist": {
-                "type": "string"
-              },
-              "Billedtekst": {
-                "type": "string"
-              },
-              "Fotograf": {
-                "type": "string"
-              },
-              "Land": {
-                "type": "string"
-              },
-              "Forbokstav": {
-                "type": "string"
-              },
-              "OLD_ID": {
-                "type": "number",
-                "format": "float"
               },
               "ny_type": {
                 "oneOf": [
@@ -1371,9 +1315,6 @@
                   }
                 ],
                 "example": "string or id"
-              },
-              "url": {
-                "type": "string"
               },
               "area": {
                 "oneOf": [
@@ -1388,6 +1329,24 @@
               },
               "beskrivelse": {
                 "type": "string"
+              },
+              "kommune": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
+              "Status": {
+                "type": "string",
+                "enum": [
+                  "Kladd",
+                  "Godkjent"
+                ]
               }
             }
           }
@@ -1453,70 +1412,14 @@
             "type": "number",
             "format": "float"
           },
-          "Tillegg": {
-            "type": "string"
-          },
           "Type": {
             "type": "string"
-          },
-          "Kart": {
-            "type": "string"
-          },
-          "Bredde": {
-            "type": "number",
-            "format": "float"
-          },
-          "Lengde": {
-            "type": "number",
-            "format": "float"
           },
           "FORKLARING": {
             "type": "string"
           },
           "HISTORIE": {
             "type": "string"
-          },
-          "Dato": {
-            "type": "string"
-          },
-          "Merk": {
-            "type": "string"
-          },
-          "KILDE": {
-            "type": "string"
-          },
-          "lat": {
-            "type": "number",
-            "format": "float"
-          },
-          "long": {
-            "type": "number",
-            "format": "float"
-          },
-          "Bilde": {
-            "type": "string"
-          },
-          "Nett": {
-            "type": "string"
-          },
-          "Nett_hist": {
-            "type": "string"
-          },
-          "Billedtekst": {
-            "type": "string"
-          },
-          "Fotograf": {
-            "type": "string"
-          },
-          "Land": {
-            "type": "string"
-          },
-          "Forbokstav": {
-            "type": "string"
-          },
-          "OLD_ID": {
-            "type": "number",
-            "format": "float"
           },
           "ny_type": {
             "type": "object",
@@ -2210,9 +2113,6 @@
               }
             }
           },
-          "url": {
-            "type": "string"
-          },
           "area": {
             "type": "object",
             "properties": {
@@ -2287,6 +2187,76 @@
           },
           "beskrivelse": {
             "type": "string"
+          },
+          "kommune": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {
+                      "navn": {
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "createdBy": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "updatedBy": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "Status": {
+            "type": "string",
+            "enum": [
+              "Kladd",
+              "Godkjent"
+            ]
           },
           "createdAt": {
             "type": "string",
