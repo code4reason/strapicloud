@@ -54,6 +54,11 @@
         "Kladd",
         "Godkjent"
       ]
+    },
+    "Bilde": {
+      "type": "component",
+      "repeatable": true,
+      "component": "bilde.link"
     }
   }
 }

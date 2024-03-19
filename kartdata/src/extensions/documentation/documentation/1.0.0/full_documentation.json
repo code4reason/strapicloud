@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-03-19T09:20:58.342Z"
+    "x-generation-date": "2024-03-19T09:29:35.283Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1347,6 +1347,12 @@
                   "Kladd",
                   "Godkjent"
                 ]
+              },
+              "Bilde": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BildeLinkComponent"
+                }
               }
             }
           }
@@ -2258,6 +2264,12 @@
               "Godkjent"
             ]
           },
+          "Bilde": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BildeLinkComponent"
+            }
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -2325,6 +2337,23 @@
           },
           "meta": {
             "type": "object"
+          }
+        }
+      },
+      "BildeLinkComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "Tittel": {
+            "type": "string"
+          },
+          "Beskrivelse": {
+            "type": "string"
+          },
+          "URL": {
+            "type": "string"
           }
         }
       },

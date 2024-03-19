@@ -896,6 +896,7 @@ export interface ApiNameName extends Schema.CollectionType {
       'api::kommune.kommune'
     >;
     Status: Attribute.Enumeration<['Kladd', 'Godkjent']>;
+    Bilde: Attribute.Component<'bilde.link', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
