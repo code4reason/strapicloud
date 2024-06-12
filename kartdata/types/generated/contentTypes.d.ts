@@ -856,10 +856,10 @@ export interface ApiLineLine extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    linedata: Attribute.JSON;
+    navn: Attribute.String;
+    koordinater: Attribute.JSON;
     beskrivelse: Attribute.RichText;
-    rawdata: Attribute.JSON;
+    raadata: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -921,7 +921,7 @@ export interface ApiTypeType extends Schema.CollectionType {
   attributes: {
     Navn: Attribute.String;
     Beskrivelse: Attribute.String;
-    Symbol: Attribute.Media;
+    Symbol: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

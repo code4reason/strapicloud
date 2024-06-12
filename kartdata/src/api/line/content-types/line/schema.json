@@ -12,16 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "navn": {
       "type": "string"
     },
-    "linedata": {
+    "koordinater": {
       "type": "json"
     },
     "beskrivelse": {
       "type": "richtext"
     },
-    "rawdata": {
+    "raadata": {
       "type": "json"
     }
   }
