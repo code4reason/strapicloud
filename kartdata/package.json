@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@strapi/icons": "1.19.0",
+    "@strapi/plugin-color-picker": "4.25.11",
     "@strapi/plugin-documentation": "4.25.11",
     "@strapi/plugin-graphql": "4.25.11",
-    "@strapi/plugin-i18n": "4.25.11",
     "@strapi/plugin-sentry": "4.25.11",
     "@strapi/plugin-users-permissions": "4.25.11",
     "@strapi/provider-email-mailgun": "4.25.11",
@@ -29,12 +29,11 @@
     "mysql2": "3.9.4",
     "passport-google-oauth2": "0.2.0",
     "pg": "8.11.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-intl": "6.4.1",
-    "react-router-dom": "5.3.4",
-    "sqlite3": "5.1.2",
-    "styled-components": "5.3.3"
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
