@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tomte_statuser",
+  "info": {
+    "singularName": "tomte-status",
+    "pluralName": "tomte-statuser",
+    "displayName": "TomteStatus",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Beskrivelse": {
+      "type": "string"
+    }
+  }
+}

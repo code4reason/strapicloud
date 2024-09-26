@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hyttetomter",
+  "info": {
+    "singularName": "hyttetomt",
+    "pluralName": "hyttetomter",
+    "displayName": "Hyttetomt",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Beskrivelse": {
+      "type": "text"
+    },
+    "Areal": {
+      "type": "decimal"
+    },
+    "tomte_status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tomte-status.tomte-status"
+    }
+  }
+}

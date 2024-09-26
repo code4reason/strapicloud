@@ -767,6 +767,43 @@ export interface ApiAreaArea extends Schema.CollectionType {
   };
 }
 
+export interface ApiHyttetomtHyttetomt extends Schema.CollectionType {
+  collectionName: 'hyttetomter';
+  info: {
+    singularName: 'hyttetomt';
+    pluralName: 'hyttetomter';
+    displayName: 'Hyttetomt';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Beskrivelse: Attribute.Text;
+    Areal: Attribute.Decimal;
+    tomte_status: Attribute.Relation<
+      'api::hyttetomt.hyttetomt',
+      'oneToOne',
+      'api::tomte-status.tomte-status'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hyttetomt.hyttetomt',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hyttetomt.hyttetomt',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiKommuneKommune extends Schema.CollectionType {
   collectionName: 'kommuner';
   info: {
@@ -862,6 +899,37 @@ export interface ApiNameName extends Schema.CollectionType {
   };
 }
 
+export interface ApiTomteStatusTomteStatus extends Schema.CollectionType {
+  collectionName: 'tomte_statuser';
+  info: {
+    singularName: 'tomte-status';
+    pluralName: 'tomte-statuser';
+    displayName: 'TomteStatus';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Beskrivelse: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tomte-status.tomte-status',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tomte-status.tomte-status',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTypeType extends Schema.CollectionType {
   collectionName: 'types';
   info: {
@@ -904,9 +972,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::area.area': ApiAreaArea;
+      'api::hyttetomt.hyttetomt': ApiHyttetomtHyttetomt;
       'api::kommune.kommune': ApiKommuneKommune;
       'api::line.line': ApiLineLine;
       'api::name.name': ApiNameName;
+      'api::tomte-status.tomte-status': ApiTomteStatusTomteStatus;
       'api::type.type': ApiTypeType;
     }
   }
