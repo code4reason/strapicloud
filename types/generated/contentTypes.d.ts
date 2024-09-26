@@ -780,6 +780,7 @@ export interface ApiKommuneKommune extends Schema.CollectionType {
   };
   attributes: {
     navn: Attribute.String & Attribute.Required;
+    Test: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

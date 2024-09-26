@@ -15,6 +15,9 @@
     "navn": {
       "type": "string",
       "required": true
+    },
+    "Test": {
+      "type": "string"
     }
   }
 }
