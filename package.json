@@ -1,6 +1,6 @@
 {
   "name": "strapicloud",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "private": true,
   "description": "A Strapi application for mapdata in Engerdal/ Norway",
   "license": "SEE LICENSE IN LICENSE",
