@@ -13,22 +13,23 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/admin": "^4.25.11",
-    "@strapi/icons": "1.19.0",
-    "@strapi/plugin-documentation": "5.0.0",
-    "@strapi/plugin-graphql": "5.0.0",
-    "@strapi/plugin-users-permissions": "5.0.0",
-    "@strapi/provider-email-mailgun": "5.0.0",
-    "@strapi/strapi": "5.0.0",
-    "better-sqlite3": "8.6.0",
-    "lodash": "4.17.21",
-    "passport-google-oauth2": "0.2.0",
-    "pg": "8.11.1",
+    "@strapi/email": "^5.0.1",
+    "@strapi/plugin-cloud": "5.0.1",
+    "@strapi/plugin-documentation": "^5.0.1",
+    "@strapi/plugin-users-permissions": "5.0.1",
+    "@strapi/strapi": "5.0.1",
+    "better-sqlite3": "9.4.3",
+    "pg": "^8.13.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-intl": "6.4.1",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
