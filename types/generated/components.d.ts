@@ -1,27 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface GeometryType extends Struct.ComponentSchema {
-  collectionName: 'components_geometry_types';
-  info: {
-    displayName: 'type';
-    description: '';
-  };
-  attributes: {
-    type: Schema.Attribute.Enumeration<
-      [
-        'Point',
-        'MultiPoint',
-        'LineString',
-        'MultiLineString',
-        'Polygon',
-        'MultiPolygon',
-        'GeometryCollection',
-      ]
-    >;
-    coordinates: Schema.Attribute.JSON;
-  };
-}
-
 export interface PropertiesName extends Struct.ComponentSchema {
   collectionName: 'components_properties_names';
   info: {
@@ -59,6 +37,28 @@ export interface PropertiesName extends Struct.ComponentSchema {
   };
 }
 
+export interface GeometryType extends Struct.ComponentSchema {
+  collectionName: 'components_geometry_types';
+  info: {
+    displayName: 'type';
+    description: '';
+  };
+  attributes: {
+    type: Schema.Attribute.Enumeration<
+      [
+        'Point',
+        'MultiPoint',
+        'LineString',
+        'MultiLineString',
+        'Polygon',
+        'MultiPolygon',
+        'GeometryCollection',
+      ]
+    >;
+    coordinates: Schema.Attribute.JSON;
+  };
+}
+
 export interface BildeLink extends Struct.ComponentSchema {
   collectionName: 'components_bilde_links';
   info: {
@@ -74,8 +74,8 @@ export interface BildeLink extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'geometry.type': GeometryType;
       'properties.name': PropertiesName;
+      'geometry.type': GeometryType;
       'bilde.link': BildeLink;
     }
   }
