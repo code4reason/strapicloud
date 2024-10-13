@@ -11,21 +11,22 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-documentation": "^4.25.12",
+    "@strapi/admin": "^4.25.12",
+    "@strapi/icons": "1.19.0",
+    "@strapi/plugin-documentation": "4.25.12",
+    "@strapi/plugin-graphql": "4.25.12",
     "@strapi/plugin-users-permissions": "4.25.12",
+    "@strapi/provider-email-mailgun": "4.25.12",
     "@strapi/strapi": "4.25.12",
-    "better-sqlite3": "9.4.3",
-    "pg": "^8.13.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "typescript": "^5"
+    "better-sqlite3": "8.6.0",
+    "lodash": "4.17.21",
+    "passport-google-oauth2": "0.2.0",
+    "pg": "8.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "6.4.1",
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.3"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
