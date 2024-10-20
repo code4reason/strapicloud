@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variables",
+  "info": {
+    "singularName": "variable",
+    "pluralName": "variables",
+    "displayName": "variable"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "wanip": {
+      "type": "json"
+    }
+  }
+}
