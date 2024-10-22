@@ -960,12 +960,15 @@ export interface ApiVariableVariable extends Schema.CollectionType {
     singularName: 'variable';
     pluralName: 'variables';
     displayName: 'variable';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
     wanip: Attribute.JSON;
+    webcam: Attribute.Media<'images' | 'videos'>;
+    imagedata: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

@@ -4,13 +4,26 @@
   "info": {
     "singularName": "variable",
     "pluralName": "variables",
-    "displayName": "variable"
+    "displayName": "variable",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "attributes": {
     "wanip": {
+      "type": "json"
+    },
+    "webcam": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "imagedata": {
       "type": "json"
     }
   }
