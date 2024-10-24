@@ -899,6 +899,43 @@ export interface ApiNameName extends Schema.CollectionType {
   };
 }
 
+export interface ApiOppgaveOppgave extends Schema.CollectionType {
+  collectionName: 'oppgaver';
+  info: {
+    singularName: 'oppgave';
+    pluralName: 'oppgaver';
+    displayName: 'oppgave';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    ferdig: Attribute.Date;
+    estimert_kostnad: Attribute.Integer;
+    dugnad: Attribute.Boolean;
+    estiimat_beskrivelse: Attribute.Text;
+    planlagt: Attribute.String;
+    beskrivelse: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::oppgave.oppgave',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::oppgave.oppgave',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTomteStatusTomteStatus extends Schema.CollectionType {
   collectionName: 'tomte_statuser';
   info: {
@@ -968,7 +1005,6 @@ export interface ApiVariableVariable extends Schema.CollectionType {
   attributes: {
     wanip: Attribute.JSON;
     webcam: Attribute.Media<'images' | 'videos'>;
-    imagedata: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1008,6 +1044,7 @@ declare module '@strapi/types' {
       'api::kommune.kommune': ApiKommuneKommune;
       'api::line.line': ApiLineLine;
       'api::name.name': ApiNameName;
+      'api::oppgave.oppgave': ApiOppgaveOppgave;
       'api::tomte-status.tomte-status': ApiTomteStatusTomteStatus;
       'api::type.type': ApiTypeType;
       'api::variable.variable': ApiVariableVariable;

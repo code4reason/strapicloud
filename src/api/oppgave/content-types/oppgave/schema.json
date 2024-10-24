@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oppgaver",
+  "info": {
+    "singularName": "oppgave",
+    "pluralName": "oppgaver",
+    "displayName": "oppgave",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ferdig": {
+      "type": "date"
+    },
+    "estimert_kostnad": {
+      "type": "integer"
+    },
+    "dugnad": {
+      "type": "boolean"
+    },
+    "estiimat_beskrivelse": {
+      "type": "text"
+    },
+    "planlagt": {
+      "type": "string"
+    },
+    "beskrivelse": {
+      "type": "richtext"
+    }
+  }
+}

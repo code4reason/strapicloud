@@ -22,9 +22,6 @@
         "images",
         "videos"
       ]
-    },
-    "imagedata": {
-      "type": "json"
     }
   }
 }
