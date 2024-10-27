@@ -1,0 +1,70 @@
+[
+  {
+    "id": 55,
+    "name": "webcam_27_10_2024_08_10_02.jpg",
+    "alternativeText": null,
+    "caption": null,
+    "width": 4056,
+    "height": 1216,
+    "formats": {
+      "large": {
+        "ext": ".jpg",
+        "url": "https://natural-flower-ea4e634d73.media.strapiapp.com/large_webcam_27_10_2024_08_10_02_fbe5cd943d.jpg",
+        "hash": "large_webcam_27_10_2024_08_10_02_fbe5cd943d",
+        "mime": "image/jpeg",
+        "name": "large_webcam_27_10_2024_08_10_02.jpg",
+        "path": null,
+        "size": 13.01,
+        "width": 1000,
+        "height": 300,
+        "sizeInBytes": 13009
+      },
+      "small": {
+        "ext": ".jpg",
+        "url": "https://natural-flower-ea4e634d73.media.strapiapp.com/small_webcam_27_10_2024_08_10_02_fbe5cd943d.jpg",
+        "hash": "small_webcam_27_10_2024_08_10_02_fbe5cd943d",
+        "mime": "image/jpeg",
+        "name": "small_webcam_27_10_2024_08_10_02.jpg",
+        "path": null,
+        "size": 4.52,
+        "width": 500,
+        "height": 150,
+        "sizeInBytes": 4524
+      },
+      "medium": {
+        "ext": ".jpg",
+        "url": "https://natural-flower-ea4e634d73.media.strapiapp.com/medium_webcam_27_10_2024_08_10_02_fbe5cd943d.jpg",
+        "hash": "medium_webcam_27_10_2024_08_10_02_fbe5cd943d",
+        "mime": "image/jpeg",
+        "name": "medium_webcam_27_10_2024_08_10_02.jpg",
+        "path": null,
+        "size": 8.42,
+        "width": 750,
+        "height": 225,
+        "sizeInBytes": 8423
+      },
+      "thumbnail": {
+        "ext": ".jpg",
+        "url": "https://natural-flower-ea4e634d73.media.strapiapp.com/thumbnail_webcam_27_10_2024_08_10_02_fbe5cd943d.jpg",
+        "hash": "thumbnail_webcam_27_10_2024_08_10_02_fbe5cd943d",
+        "mime": "image/jpeg",
+        "name": "thumbnail_webcam_27_10_2024_08_10_02.jpg",
+        "path": null,
+        "size": 1.74,
+        "width": 245,
+        "height": 73,
+        "sizeInBytes": 1740
+      }
+    },
+    "hash": "webcam_27_10_2024_08_10_02_fbe5cd943d",
+    "ext": ".jpg",
+    "mime": "image/jpeg",
+    "size": 142.52,
+    "url": "https://natural-flower-ea4e634d73.media.strapiapp.com/webcam_27_10_2024_08_10_02_fbe5cd943d.jpg",
+    "previewUrl": null,
+    "provider": "strapi-provider-upload-strapi-cloud",
+    "provider_metadata": null,
+    "createdAt": "2024-10-27T08:09:15.970Z",
+    "updatedAt": "2024-10-27T08:09:15.970Z"
+  }
+]

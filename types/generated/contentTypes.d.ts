@@ -1005,6 +1005,7 @@ export interface ApiVariableVariable extends Schema.CollectionType {
   attributes: {
     wanip: Attribute.JSON;
     webcam: Attribute.Media<'images' | 'videos'>;
+    imageURL: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

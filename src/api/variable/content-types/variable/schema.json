@@ -22,6 +22,9 @@
         "images",
         "videos"
       ]
+    },
+    "imageURL": {
+      "type": "json"
     }
   }
 }
