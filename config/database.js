@@ -1,11 +1,10 @@
 const path = require("path");
 
 module.exports = ({ env }) => {
-  const client = env("DATABASE_CLIENT", "postgres");
+  const client = env("DATABASE_CLIENT", "sqlite");
 
   const connections = {
-    
-       postgres: {
+    postgres: {
       connection: {
         connectionString: env("DATABASE_URL"),
         host: env("DATABASE_HOST", "localhost"),
@@ -21,7 +20,7 @@ module.exports = ({ env }) => {
           cipher: env("DATABASE_SSL_CIPHER", undefined),
           rejectUnauthorized: env.bool(
             "DATABASE_SSL_REJECT_UNAUTHORIZED",
-            true
+            true,
           ),
         },
         schema: env("DATABASE_SCHEMA", "public"),
@@ -36,7 +35,7 @@ module.exports = ({ env }) => {
         filename: path.join(
           __dirname,
           "..",
-          env("DATABASE_FILENAME", ".tmp/data.db")
+          env("DATABASE_FILENAME", ".tmp/data.db"),
         ),
       },
       useNullAsDefault: true,
