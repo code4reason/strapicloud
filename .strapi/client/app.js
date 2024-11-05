@@ -3,14 +3,12 @@
  * Any modifications made will be discarded.
  */
 import documentation from "@strapi/plugin-documentation/strapi-admin";
-import graphql from "@strapi/plugin-graphql/strapi-admin";
 import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
 renderAdmin(document.getElementById("strapi"), {
   plugins: {
     documentation: documentation,
-    graphql: graphql,
     "users-permissions": usersPermissions,
   },
 });
