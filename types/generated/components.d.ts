@@ -1,26 +1,26 @@
-import type { Attribute, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface BildeLink extends Schema.Component {
+export interface BildeLink extends Struct.ComponentSchema {
   collectionName: 'components_bilde_links';
   info: {
     displayName: 'Link';
   };
   attributes: {
-    Beskrivelse: Attribute.Text;
-    Tittel: Attribute.String;
-    URL: Attribute.String;
+    Beskrivelse: Schema.Attribute.Text;
+    Tittel: Schema.Attribute.String;
+    URL: Schema.Attribute.String;
   };
 }
 
-export interface GeometryType extends Schema.Component {
+export interface GeometryType extends Struct.ComponentSchema {
   collectionName: 'components_geometry_types';
   info: {
     description: '';
     displayName: 'type';
   };
   attributes: {
-    coordinates: Attribute.JSON;
-    type: Attribute.Enumeration<
+    coordinates: Schema.Attribute.JSON;
+    type: Schema.Attribute.Enumeration<
       [
         'Point',
         'MultiPoint',
@@ -28,52 +28,52 @@ export interface GeometryType extends Schema.Component {
         'MultiLineString',
         'Polygon',
         'MultiPolygon',
-        'GeometryCollection'
+        'GeometryCollection',
       ]
     >;
   };
 }
 
-export interface PropertiesName extends Schema.Component {
+export interface PropertiesName extends Struct.ComponentSchema {
   collectionName: 'components_properties_names';
   info: {
     description: '';
     displayName: 'name';
   };
   attributes: {
-    bilde: Attribute.String;
-    billedtekst: Attribute.String;
-    bredde: Attribute.String;
-    dato: Attribute.String;
-    forbokstav: Attribute.String;
-    Forklaring: Attribute.Text;
-    fotograf: Attribute.String;
-    Historie: Attribute.Text;
-    kart: Attribute.String;
-    katblad: Attribute.String;
-    kilde: Attribute.String;
-    kommune: Attribute.String;
-    land: Attribute.String;
-    lat: Attribute.String;
-    lengde: Attribute.String;
-    lond_lat: Attribute.String;
-    lond_long: Attribute.String;
-    long: Attribute.String;
-    navn: Attribute.String;
-    nett: Attribute.String;
-    nett_hist: Attribute.String;
-    pin: Attribute.String;
-    seksjon: Attribute.String;
-    stripe: Attribute.Decimal;
-    tillegg: Attribute.String;
-    type: Attribute.String;
-    utm: Attribute.String;
+    bilde: Schema.Attribute.String;
+    billedtekst: Schema.Attribute.String;
+    bredde: Schema.Attribute.String;
+    dato: Schema.Attribute.String;
+    forbokstav: Schema.Attribute.String;
+    Forklaring: Schema.Attribute.Text;
+    fotograf: Schema.Attribute.String;
+    Historie: Schema.Attribute.Text;
+    kart: Schema.Attribute.String;
+    katblad: Schema.Attribute.String;
+    kilde: Schema.Attribute.String;
+    kommune: Schema.Attribute.String;
+    land: Schema.Attribute.String;
+    lat: Schema.Attribute.String;
+    lengde: Schema.Attribute.String;
+    lond_lat: Schema.Attribute.String;
+    lond_long: Schema.Attribute.String;
+    long: Schema.Attribute.String;
+    navn: Schema.Attribute.String;
+    nett: Schema.Attribute.String;
+    nett_hist: Schema.Attribute.String;
+    pin: Schema.Attribute.String;
+    seksjon: Schema.Attribute.String;
+    stripe: Schema.Attribute.Decimal;
+    tillegg: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+    utm: Schema.Attribute.String;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'bilde.link': BildeLink;
       'geometry.type': GeometryType;
       'properties.name': PropertiesName;
